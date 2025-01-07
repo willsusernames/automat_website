@@ -1,1 +1,77 @@
+# Byte-compiled files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment directories
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+*.out
+*.err
+*.pid
+*.swp
+*.swo
+*.~undo-tree
+
+# Coverage and testing files
+.coverage
+coverage.xml
+*.cover
+.cache/
+nosetests.xml
+.junit.xml
+*.pytest_cache/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Dependency files
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environment variables
+.env
+.env.*
+*.envrc
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# Data and temporary files
+*.db
+*.sqlite
+*.h5
+*.csv
+*.tsv
+*.parquet
+
+# Secrets and credentials
+*.pem
+*.key
+*.crt
+
+# OS-specific files
 .DS_Store
+Thumbs.db
+
