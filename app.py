@@ -76,7 +76,7 @@ def index():
 @app.route('/MIT/download')
 
 def push1():
-    return call(['python3', 'test.py'])
+    return test.trial_function()
 
 
 
