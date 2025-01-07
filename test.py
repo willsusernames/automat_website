@@ -1,1 +1,4 @@
-print('this is a test')
+def trial_function():
+    return "This function works"
+
+trial_function()

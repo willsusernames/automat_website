@@ -4,24 +4,55 @@
 <title>Task Master</title>
 {% endblock %}
 
+{% block check %}
+<p><strong>Note on the Automation Function</strong></p>
+<p>Each entry in the list has an automation option that users can enter time
+    durations into. When a duration is set, the program will automatically 
+    download the data set once every duration, starting on the day the automation was set. 
+</p>
+
+{% endblock %}
+
 {% block body %}
 <div class = 'content'> 
-        <h1>Task Master</h1>
+        <h1>Dataset Task Master</h1>
 
         <table>
             <tr>
-                <th>Task</th>
-                <th>Added</th>
-                <th>Actions</th>
+                <th>Dataset</th>
+                <th>Last Updated</th>
+                <th>Run</th>
+                <th>Automate</th>
+                <th>About</th>
+                <th>Delete</th>
+            </tr>
+            <tr>
+                <td>MIT Living Wage</td>
+                <td>01-07-2025</td>
+                <td>
+                    <a href="/MIT/download">Download MIT</a>
+                </td>
+                <td>Not Available Yet</td>
+                <td>
+                    <a href="/MIT">MIT</a>
+                </td>
+                <td>
+                    <a href="/delete/MIT">Delete</a>
+                </td>
             </tr>
             {% for task in tasks %}
                 <tr>
                     <td>{{ task.content }}</td>
                     <td>{{ task.date_created.date() }} </td>
                     <td>
-                        <a href="">Delete</a>
-                        <br>
-                        <a href="">Update</a>
+                        <a href="/{{task.content}}/dowload">Download {{ task.content }}</a>
+                    </td>
+                    <td>Not Available Yet</td>
+                    <td>
+                        <a href="/{{task.content}}">{{ task.content }}</a>
+                    </td>
+                    <td>
+                        <a href="/delete/{{task.id}}">Delete</a>
                     </td>
                 </tr>
             {% endfor %}
